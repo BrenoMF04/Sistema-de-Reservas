@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserva de Mesa - Restaurante</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Faça sua Reserva</h1>
+
+    <form id="form-reserva" onsubmit="fazerReserva(event)">
+      <label for="nome_cliente">Nome do Cliente:</label>
+      <input type="text" id="nome_cliente" name="cliente_nome" required />
+
+      <label for="telefone_cliente">Telefone:</label>
+      <input
+        type="tel"
+        id="telefone_cliente"
+        name="cliente_telefone"
+        required
+      />
+
+      <label for="num_pessoas">Número de Pessoas:</label>
+      <select name="num_pessoas" id="num_pessoas">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+      <label for="mesa_id">Escolha a Mesa:</label>
+      <select id="mesa_id" name="mesa_id" required>
+        <option value="1">Mesa 1</option>
+        <option value="2">Mesa 2</option>
+        <option value="3">Mesa 3</option>
+        <option value="4">Mesa 4</option>
+        <option value="5">Mesa 5</option>
+        <option value="6">Mesa 6</option>
+        <option value="7">Mesa 7</option>
+        <option value="8">Mesa 8</option>
+        <option value="9">Mesa 9</option>
+        <option value="10">Mesa 10</option>
+      </select>
+
+      <label for="data_reserva">Data da Reserva:</label>
+      <input type="date" id="data_reserva" name="data_reserva" required />
+
+      <label for="horario_reserva">Horário da Reserva:</label>
+      <input type="time" id="horario_reserva" name="horario_reserva" required />
+
+      <button type="submit">Confirmar Reserva</button>
+
+      <div class="admin-button">
+        <a href="gerenciar.html" class="btn-gerenciar">Gerenciar Reservas</a>
+      </div>
+    </form>
+  </body>
+</html>

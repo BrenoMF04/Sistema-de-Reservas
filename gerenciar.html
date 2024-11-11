@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciar Reservas</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gerenciar Reservas</h1>
+
+      <div class="admin-button">
+        <a href="index.html" class="btn-gerenciar">Voltar para Reservas</a>
+      </div>
+
+      <div id="mensagem"></div>
+
+      <table class="reservas-table">
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Telefone</th>
+            <th>Mesa</th>
+            <th>Data</th>
+            <th>Horário</th>
+            <th>Nº Pessoas</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-reservas"></tbody>
+      </table>
+    </div>
+
+    <div id="modal-editar" class="modal">
+      <div class="modal-content">
+        <h2>Editar Reserva</h2>
+        <form id="form-editar">
+          <input type="hidden" id="reserva_id" name="reserva_id" />
+
+          <label for="nome_cliente">Nome do Cliente</label>
+          <input type="text" id="nome_cliente" name="nome_cliente" required />
+
+          <label for="telefone_cliente">Telefone do Cliente</label>
+          <input
+            type="text"
+            id="telefone_cliente"
+            name="telefone_cliente"
+            required
+          />
+
+          <label for="num_pessoas">Número de Pessoas</label>
+          <select name="num_pessoas" id="num_pessoas">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+
+          <label for="mesa_id">Número da Mesa</label>
+          <select id="mesa_id" name="mesa_id" required>
+            <option value="1">Mesa 1</option>
+            <option value="2">Mesa 2</option>
+            <option value="3">Mesa 3</option>
+            <option value="4">Mesa 4</option>
+            <option value="5">Mesa 5</option>
+            <option value="6">Mesa 6</option>
+            <option value="7">Mesa 7</option>
+            <option value="8">Mesa 8</option>
+            <option value="9">Mesa 9</option>
+            <option value="10">Mesa 10</option>
+          </select>
+
+          <label for="data_reserva">Data da Reserva</label>
+          <input type="date" id="data_reserva" name="data_reserva" required />
+
+          <label for="horario_reserva">Horário da Reserva</label>
+          <input
+            type="time"
+            id="horario_reserva"
+            name="horario_reserva"
+            required
+          />
+
+          <button type="button" onclick="atualizarReserva()">Atualizar</button>
+          <button class="btn-fechar" type="button" onclick="fecharModal()">
+            Fechar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
